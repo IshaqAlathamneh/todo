@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {FormControl, Form, Button} from 'react-bootstrap';
 function TodoForm (props) {
   const [item, setItem] = useState({})
-  
+
   const handleInputChange = e => {
     setItem({...item, [e.target.name]: e.target.value } );
   };
