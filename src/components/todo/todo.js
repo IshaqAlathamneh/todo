@@ -24,6 +24,9 @@ function ToDo() {
     setList(list);
   }, [])
 
+  useEffect(()=>{
+    document.title = `There are ${list.filter(item => !item.complete).length} Items To Complete`
+  })
   const addItem = (item) => {
     item._id = Math.random();
     item.complete = false;

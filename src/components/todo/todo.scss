@@ -56,24 +56,30 @@ body, html {
             margin: .75em .5em;
 
             &.complete-true {
-              span {
-                background: pink;
+              
+                background: rgb(0, 60, 255);
                 text-decoration:line-through;
                 &:hover {
-                   background: seagreen;
+                   background: rgba(0, 60, 255, 0.459);
                 }
-              }
+                cursor:pointer;
+            }
+            &.complete-false {
+              
+                background: rgb(255, 0, 0);
+                &:hover {
+                   background: rgba(255, 0, 0, 0.459);
+                }
+                cursor:pointer;
             }
 
             span {
-                background: #e0e0e0;
+                background: #ffffff00;
                 cursor:pointer;
-                &:hover {
-                    background: pink;
-                }
+                
             }
              span, input {
-                 border: .5px solid #eee;
+                 border: 0px solid #eee;
                  display:inline-block;
                  padding: .2em .25em;
                  width: 300px;
