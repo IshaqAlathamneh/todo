@@ -7,7 +7,9 @@
 
 [First PR](https://github.com/IshaqAlathamneh/todo/pull/1)
 
+[First PR](https://github.com/IshaqAlathamneh/todo/pull/2)
+
 
 ## UML 
-
-![uml](./31.png)
+<img src="./31.png" style="width: 400px">
+<img src="./l32.png" style="width: 400px">
