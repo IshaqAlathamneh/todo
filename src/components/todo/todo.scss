@@ -26,7 +26,7 @@ body, html {
 
     display:flex;
     flex-direction:row;
-    justify-content: flex-start;
+    justify-content:center;
     margin: 2em;
 
     form {
@@ -78,12 +78,6 @@ body, html {
                 cursor:pointer;
                 
             }
-             span, input {
-                 border: 0px solid #eee;
-                 display:inline-block;
-                 padding: .2em .25em;
-                 width: 300px;
-             }
 
             button {
                 background: transparent;
@@ -97,4 +91,50 @@ body, html {
         }
     }
 
+}
+header{
+    h1{
+        background-color: rgb(83, 83, 255);
+        color: #eee;
+        padding: 20px;
+    }
+    nav{
+        width: 90%;
+        background-color: black;
+        margin: 0 auto;
+        h2{
+            color: #eee;
+            padding: 10px;
+        }
+    }
+
+}
+// .todo{
+//     margin:auto;
+// }
+.cards{
+    width: 400px;
+    margin-left: 30px;
+}
+.form{
+    border: 1px solid lightgrey;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    margin-right: 30px;
+    height: 350px;
+}
+#edit{
+    width: 170px;
+    position: relative;
+    left: 50%;
+    margin-left: -313px;
+    bottom: 150px;
+}
+.is{
+    margin-right: 30px;
+}
+.page-link{
+    padding: .5rem .75rem;
+    width: fit-content;
 }
