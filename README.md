@@ -11,5 +11,6 @@
 
 
 ## UML 
-<img src="./31.png" style="width: 400px">
-<img src="./l32.png" style="width: 400px">
+<img src="./31.png" style="width: 200px">
+<img src="./l32.png" style="width: 200px">
+<img src="./l33.png" style="width: 200px">
