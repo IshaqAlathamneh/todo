@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {FormControl, Form, Button} from 'react-bootstrap';
+import Auth from '../auth/auth';
 function TodoForm (props) {
   const [item, setItem] = useState({})
 
@@ -18,6 +19,8 @@ function TodoForm (props) {
   
     return (
       <>
+      <Auth action="create">
+
         <h3>Add Item</h3>
         <Form onSubmit={handleSubmit}>
           <label>
@@ -38,6 +41,7 @@ function TodoForm (props) {
           </label>
           <Button type="submit">Add Item</Button>
         </Form>
+      </Auth>
       </>
     );
   
