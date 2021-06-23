@@ -44,6 +44,9 @@ function AuthProvider (props) {
         const result = await fetch(`${API_SERVER}/signup`, {
             method: 'post',
             mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json',
+            },
             body: JSON.stringify(obj)
         });
 
