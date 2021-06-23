@@ -32,7 +32,7 @@ function Login (props) {
             <Button variant="danger" className="ml-auto" onClick={context.logout} id={'logout'}>
               Logout
             </Button>
-          ) : (
+          ) : (<>
             <Form inline className="ml-auto" onSubmit={handleSubmit} id="signinForm">
               <FormControl
                 className="mr-sm-2"
@@ -54,8 +54,9 @@ function Login (props) {
                 Login
               </Button>
             </Form>
-          )}
           <SignUp></SignUp>
+          </>
+          )}
         </>
       );
         // return (
