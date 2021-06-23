@@ -53,14 +53,10 @@ const useAjax = (list, setList) => {
       };
 
       const handleDelete = (id) => {
-        console.log('------------',id);
         let item = list.filter(i => i._id === id)[0] || {};
-        console.log('-bbbbbbbbb-', item);
         let url = `${todoAPI}/${id}`;
         let myList = list.filter(item => item._id !== id)
         let myLs = myList.filter(item => !item.msg)
-        console.log('-a--a-a-a-', myLs);
-        
           axios({
             method: 'delete',
             url: `/tasks/${id}`,

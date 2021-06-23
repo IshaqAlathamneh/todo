@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import TodoForm from './form.js';
 import TodoList from './list.js';
 import { Button, Dropdown, Modal, Form, DropdownButton } from 'react-bootstrap';
@@ -10,10 +10,15 @@ import axios from 'axios';
 import Paagination from '../pagination'
 import './todo.scss';
 import MyContextProvider from '../../context/pag-prov.js';
+import {AuthContext} from '../../context/authContext.js';
+import Show from '../auth/role'
+import Login from '../auth/login.js';
+import Auth from '../auth/auth.js';
 
 const todoAPI = 'https://ishaq-api.herokuapp.com/tasks';
 const ToDo = ({ children }) => {
-
+  const context = useContext(AuthContext)
+  console.log('-1-2-3-1-2-3-',context);
   const [handleSubmit, handleChange, values] = useForm(cb)
   const [list, setList] = useState([]);
   const [editShow, setEditShow] = useState(false);
@@ -66,6 +71,7 @@ const ToDo = ({ children }) => {
 
   return (
     <>
+
       <MyContextProvider list={list}>
         <Paagination list={list} />
       </MyContextProvider>
@@ -77,6 +83,8 @@ const ToDo = ({ children }) => {
           </h2>
         </nav>
       </header>
+      {/* <Button variant="danger" onClick={context.logout} id="logout">Logout</Button> */}
+    <Show condition={context.loggedIn}>
 
       <section className="todo">
 
@@ -94,6 +102,7 @@ const ToDo = ({ children }) => {
           </Paagination>
         </div>
       </section>
+      <Auth action="update">
       <Button onClick={() => setEditShow(true)} id="edit">Edit Form</Button>
       <Modal
         size="lg"
@@ -127,6 +136,11 @@ const ToDo = ({ children }) => {
           </Form.Group>
         </Modal.Body>
       </Modal>
+      </Auth>
+    </Show>
+              <Login/>
+    
+    
     </>
   );
 };
